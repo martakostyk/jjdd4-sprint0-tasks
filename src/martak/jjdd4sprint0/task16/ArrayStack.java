@@ -14,11 +14,11 @@ public class ArrayStack<T> implements Stack<T> {
         this.top = - 1;
     }
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return top == -1;
     }
 
-    public boolean isFull() {
+    private boolean isFull() {
         return top == stack.length -1;
     }
 
@@ -52,7 +52,7 @@ public class ArrayStack<T> implements Stack<T> {
         }
     }
 
-    public T[] resizeStack() {
+    private T[] resizeStack() {
         return Arrays.copyOf(stack, stack.length * 2);
     }
 
