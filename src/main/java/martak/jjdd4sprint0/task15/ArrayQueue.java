@@ -66,41 +66,4 @@ public class ArrayQueue<T> implements Queue<T> {
         sb.append('}');
         return sb.toString();
     }
-
-    public static void main(String[] args) {
-
-        ArrayQueue queue = new ArrayQueue();
-        System.out.println(queue.toString());
-
-        try {
-            System.out.println(queue.dequeue());
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
-        queue.enqueue("first element");
-        queue.enqueue("first element");
-
-        System.out.println(queue.toString());
-        System.out.println("Queue size: " + queue.size());
-
-        try {
-            System.out.println(queue.dequeue());
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
-        System.out.println(queue.toString());
-        System.out.println("Queue size: " + queue.size());
-
-
-        try {
-            System.out.println(queue.dequeue());
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
-        System.out.println("Queue size: " + queue.size());
-
-    }
 }

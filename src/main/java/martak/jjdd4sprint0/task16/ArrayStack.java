@@ -63,47 +63,4 @@ public class ArrayStack<T> implements Stack<T> {
         sb.append('}');
         return sb.toString();
     }
-
-    public static void main(String[] args) {
-
-        ArrayStack stack = new ArrayStack();
-        System.out.println(stack.toString());
-
-        try {
-            System.out.println(stack.peek());
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
-        stack.push("first element");
-        stack.push(2.0);
-        stack.push(3);
-        stack.push("fourth element");
-        stack.push(5);
-        stack.push(6);
-
-        System.out.println(stack.toString());
-
-        try {
-            System.out.println(stack.peek());
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
-        System.out.println(stack.toString());
-
-        try {
-            System.out.println(stack.pop());
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
-        System.out.println(stack.toString());
-
-        stack.push("next object");
-
-        System.out.println(stack.toString());
-
-    }
-
 }
