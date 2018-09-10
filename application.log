@@ -1,0 +1,4 @@
+15:16:49  INFO  m.j.task4.IsNumberPalindrome - number has 5 digits
+15:16:49  INFO  m.j.task4.IsNumberPalindrome - integer array: [1, 2, 3, 2, 1]
+15:16:49  INFO  m.j.task4.IsNumberPalindrome - number has 8 digits
+15:16:49  INFO  m.j.task4.IsNumberPalindrome - integer array: [1, 2, 3, 6, 6, 5, 2, 1]
