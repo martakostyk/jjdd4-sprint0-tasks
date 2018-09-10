@@ -1,4 +1,3 @@
-17:17:59  INFO  m.j.task4.IsNumberPalindrome - number has 5 digits
-17:17:59  INFO  m.j.task4.IsNumberPalindrome - integer array: [1, 2, 3, 2, 1]
-17:17:59  INFO  m.j.task4.IsNumberPalindrome - number has 8 digits
-17:17:59  INFO  m.j.task4.IsNumberPalindrome - integer array: [1, 2, 3, 6, 6, 5, 2, 1]
+18:03:08  WARN  martak.jjdd4sprint0.task6.Fibonacci - Given number is incorrect
+18:03:13  INFO  martak.jjdd4sprint0.task6.Fibonacci - Given number is equal or less than zero
+18:03:16  WARN  martak.jjdd4sprint0.task6.Fibonacci - Given number is incorrect
