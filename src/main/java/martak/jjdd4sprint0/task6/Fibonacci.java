@@ -15,20 +15,28 @@ public class Fibonacci {
 
         while (true) {
             try {
+                System.out.println("Number: ");
                 int number = Integer.valueOf(scanner.next());
-                if (number <= 0) {
-                    LOG.info("Given number is equal or less than zero");
+                if (number < 0) {
+                    LOG.info("Given number is less than zero");
                     continue;
                 }
                 return number;
             } catch (Exception e) {
-                LOG.warn("Given number is incorrect");
+                LOG.info("Given number is incorrect");
             }
         }
     }
 
-    public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci();
-        System.out.println(fibonacci.getNumber());
+    public long fibonacciValue(int number) {
+
+        switch (number) {
+            case 0:
+                return 0;
+            case 1:
+                return 1;
+            default:
+                return fibonacciValue(number - 1) + fibonacciValue(number - 2);
+        }
     }
 }
