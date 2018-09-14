@@ -15,6 +15,11 @@ public class Fraction {
 	}
 	
 	public void displayFraction() {
+		
+		if (denominator == 0) {
+			throw new IllegalArgumentException("Cannot divide by zero");
+		}
+		
 		value = BigDecimal.valueOf((double) counter / denominator).setScale(2,RoundingMode.HALF_UP).doubleValue();
 		System.out.println(new StringBuilder(String.valueOf(value))
 				.append(" [")
@@ -28,7 +33,7 @@ public class Fraction {
 		Fraction fraction1 = new Fraction(1,2);
 		fraction1.displayFraction();
 		
-		Fraction fraction2 = new Fraction(1,3);
+		Fraction fraction2 = new Fraction(1,0);
 		fraction2.displayFraction();
 	}
 	
