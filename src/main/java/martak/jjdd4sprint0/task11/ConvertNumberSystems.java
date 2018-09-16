@@ -3,6 +3,7 @@ package martak.jjdd4sprint0.task11;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class ConvertNumberSystems {
 	
@@ -38,12 +39,57 @@ public class ConvertNumberSystems {
 		return convertedNumber;
 	}
 	
+	public String convertToHexadecimalSystem(int number) {
+		
+		int result = number;
+		List<Integer> hexadecimalSystem = new ArrayList<>();
+		
+		while (result != 0) {
+			hexadecimalSystem.add(result % 16);
+			result = result / 16;
+		}
+		
+		StringBuilder string = new StringBuilder();
+		
+		for (int i = hexadecimalSystem.size() - 1; i >= 0; i--) {
+			switch(hexadecimalSystem.get(i)) {
+			case 10: 
+				string.append("A");
+				break;
+			case 11:
+				string.append("B");
+				break;
+			case 12:
+				string.append("C");
+				break;
+			case 13:
+				string.append("D");
+				break;
+			case 14:
+				string.append("E");
+				break;
+			case 15:
+				string.append("F");
+				break;
+			default:
+				string.append(hexadecimalSystem.get(i));
+				break;
+			}
+		}
+		
+		return string.toString();
+		
+	}
+	
 	public static void main(String[] args) {
 		
 		ConvertNumberSystems converter = new ConvertNumberSystems();
 		
-		int number = converter.getNumber();
-		System.out.println(converter.convertToBinarySystem(number));
+		int toBinary = converter.getNumber();
+		System.out.println(converter.convertToBinarySystem(toBinary));
+		
+		int toHexadecimal = converter.getNumber();
+		System.out.println(converter.convertToHexadecimalSystem(toHexadecimal));
 	}
 
 }
