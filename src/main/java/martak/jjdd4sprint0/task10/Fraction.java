@@ -33,7 +33,7 @@ public class Fraction {
 		Fraction fraction1 = new Fraction(1,2);
 		fraction1.displayFraction();
 		
-		Fraction fraction2 = new Fraction(1,0);
+		Fraction fraction2 = new Fraction(1,3);
 		fraction2.displayFraction();
 	}
 	
