@@ -1,0 +1,2 @@
+pies,kot,lew,gruszka,owoc,
+świnia,banan
