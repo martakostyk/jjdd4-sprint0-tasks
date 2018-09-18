@@ -2,7 +2,9 @@ package martak.jjdd4sprint0.task13;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import java.lang.reflect.Array;
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class JoinArrays {
 
@@ -38,6 +40,17 @@ public class JoinArrays {
 
         return joined.stream()
                 .distinct()
+                .sorted(Comparator.reverseOrder())
+                .mapToInt(i -> i)
+                .toArray();
+    }
+
+    public int[] join3(int[] array1, int[] array2) {
+
+        return IntStream
+                .concat(Arrays.stream(array1), Arrays.stream(array2))
+                .distinct()
+                .boxed()
                 .sorted(Comparator.reverseOrder())
                 .mapToInt(i -> i)
                 .toArray();
