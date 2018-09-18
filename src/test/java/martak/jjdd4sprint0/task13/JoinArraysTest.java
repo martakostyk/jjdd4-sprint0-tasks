@@ -17,11 +17,27 @@ class JoinArraysTest {
         int[] array2 = new int[]{2,0};
 
         // when
-        int[] result = joinArrays.join(array1, array2);
+        int[] result = joinArrays.join1(array1, array2);
         int[] expected = new int[]{7,4,2,1,0};
 
         // then
         assertTrue(Arrays.equals(expected, result));
     }
+
+    @Test
+    public void join2MethodTest() {
+        // given
+        int[] array1 = new int[]{1,4,7,0};
+        int[] array2 = new int[]{2,0};
+
+        // when
+        int[] result = joinArrays.join2(array1, array2);
+        int[] expected = new int[]{7,4,2,1,0};
+
+        // then
+        assertTrue(Arrays.equals(expected, result));
+    }
+
+
 
 }

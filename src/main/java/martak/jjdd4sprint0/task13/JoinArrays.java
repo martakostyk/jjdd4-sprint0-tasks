@@ -8,7 +8,7 @@ public class JoinArrays {
 
     private Scanner scanner = new Scanner(System.in);
 
-    public int[] join(int[] array1, int[] array2) {
+    public int[] join1(int[] array1, int[] array2) {
 
         int[] joined = ArrayUtils.addAll(array1, array2);
 
@@ -17,6 +17,29 @@ public class JoinArrays {
                 .boxed()
                 .sorted((n1, n2) -> Integer.compare(n2, n1))
                 .mapToInt(Integer::intValue)
+                .toArray();
+    }
+
+    public int[] join2(int[] array1, int[] array2) {
+
+        List<Integer> joined = new ArrayList<>();
+
+        for (int i = 0; i < array1.length; i++) {
+            if (!joined.contains(array1[i])) {
+                joined.add(array1[i]);
+            }
+        }
+
+        for (int i = 0; i < array2.length; i++) {
+            if (!joined.contains(array2[i])) {
+                joined.add(array2[i]);
+            }
+        }
+
+        return joined.stream()
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .mapToInt(i -> i)
                 .toArray();
     }
 
@@ -56,6 +79,6 @@ public class JoinArrays {
         int[] array1 = joinArrays.getArray("First array");
         int[] array2 = joinArrays.getArray("Second array");
 
-        System.out.println(Arrays.toString(joinArrays.join(array1, array2)));
+        System.out.println(Arrays.toString(joinArrays.join1(array1, array2)));
     }
 }
